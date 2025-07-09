@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "UBND xã Thổ Châu",
+                "dien_tich": 0,
+                "ten_chi_tiet": "đặc khu Thổ Châu - tỉnh An Giang",
+                "dan_so": "đang cập nhật",
+                "sat_nhap_tu": "Xã Thổ Châu"
+            }
+        }
+    ]
+}

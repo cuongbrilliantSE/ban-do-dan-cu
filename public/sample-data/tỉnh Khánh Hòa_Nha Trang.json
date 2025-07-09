@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "UBND TP Nha Trang - số 42 Lê Thánh Tôn",
+                "dien_tich": 0,
+                "ten_chi_tiet": "phường Nha Trang - tỉnh Khánh Hòa",
+                "dan_so": "đang cập nhật",
+                "sat_nhap_tu": "Phường Vạn Thạnh, Phường Lộc Thọ, Phường Vĩnh Nguyên, Phường Tân Tiến, Phường Phước Hòa"
+            }
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "bbox": [
+                105.829807,
+                21.007722,
+                105.841593,
+                21.03043
+            ],
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                105.841448,
+                                21.008485
+                            ],
+                            [
+                                105.84145,
+                                21.007722
+                            ],
+                            [
+                                105.840474,
+                                21.007935
+                            ],
+                            [
+                                105.839579,
+                                21.008444
+                            ],
+                            [
+                                105.838526,
+                                21.009329
+                            ],
+                            [
+                                105.837693,
+                                21.010213
+                            ],
+                            [
+                                105.836842,
+                                21.011341
+                            ],
+                            [
+                                105.835572,
+                                21.012789
+                            ],
+                            [
+                                105.834224,
+                                21.014368
+                            ],
+                            [
+                                105.829807,
+                                21.018217
+                            ],
+                            [
+                                105.832354,
+                                21.023697
+                            ],
+                            [
+                                105.833716,
+                                21.026361
+                            ],
+                            [
+                                105.834708,
+                                21.028567
+                            ],
+                            [
+                                105.836107,
+                                21.03043
+                            ],
+                            [
+                                105.841593,
+                                21.028888
+                            ],
+                            [
+                                105.841419,
+                                21.020563
+                            ],
+                            [
+                                105.841462,
+                                21.018507
+                            ],
+                            [
+                                105.841434,
+                                21.013628
+                            ],
+                            [
+                                105.841448,
+                                21.008485
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "xa3321.911",
+            "properties": {
+                "matinhxa": "1.910",
+                "maxa": 910,
+                "trung_tam_hc": "Số 188 Kim Hoa, phường Văn Miếu - Quốc Tử Giám",
+                "dien_tich": 1.92,
+                "ten_chi_tiet": "phường Văn Miếu - Quốc Tử Giám - Thủ đô Hà Nội",
+                "dan_so": "105604",
+                "sat_nhap_tu": "Phường Khâm Thiên, Phường Thổ Quan, Phường Văn Chương, Phường Điện Biên, Phường Hàng Bột, Phường Văn Miếu Quốc Tử Giám, Phường Cửa Nam (phần còn lại sau khi sáp nhập vào phường Hoàn Kiếm, phường Cửa Nam, phường Ba Đình), Phường Lê Đại Hành (phần còn lại sau khi sáp nhập vào phường Hai Bà Trưng, phường Bạch Mai), Phường Nam Đồng (phần còn lại sau khi sáp nhập vào phường Đống Đa, phường Kim Liên), Phường Nguyễn Du (phần còn lại sau khi sáp nhập vào phường Cửa Nam, phường Hai Bà Trưng), Phường Phương Liên Trung Tự (phần còn lại sau khi sáp nhập vào phường Kim Liên)"
+            },
+            "type": "Feature"
+        }
+    ]
+}

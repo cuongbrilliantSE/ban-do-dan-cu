@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "Trụ sở Đảng ủy, HĐND, UBND phường Hà Phong",
+                "dien_tich": 0,
+                "ten_chi_tiet": "phường Hà Tu - tỉnh Quảng Ninh",
+                "dan_so": "đang cập nhật",
+                "sat_nhap_tu": "Phường Hà Phong, Phường Hà Tu"
+            }
+        }
+    ]
+}

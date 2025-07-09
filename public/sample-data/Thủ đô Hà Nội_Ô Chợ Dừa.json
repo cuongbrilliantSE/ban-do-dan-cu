@@ -1,0 +1,143 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "bbox": [
+                105.814967,
+                21.013919,
+                105.836107,
+                21.032124
+            ],
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                105.832354,
+                                21.023697
+                            ],
+                            [
+                                105.829807,
+                                21.018217
+                            ],
+                            [
+                                105.827358,
+                                21.019875
+                            ],
+                            [
+                                105.825786,
+                                21.020835
+                            ],
+                            [
+                                105.824533,
+                                21.01844
+                            ],
+                            [
+                                105.823691,
+                                21.016985
+                            ],
+                            [
+                                105.823328,
+                                21.016648
+                            ],
+                            [
+                                105.822741,
+                                21.016545
+                            ],
+                            [
+                                105.8222,
+                                21.016569
+                            ],
+                            [
+                                105.821614,
+                                21.016551
+                            ],
+                            [
+                                105.821004,
+                                21.016279
+                            ],
+                            [
+                                105.820256,
+                                21.015584
+                            ],
+                            [
+                                105.818984,
+                                21.013919
+                            ],
+                            [
+                                105.816019,
+                                21.016007
+                            ],
+                            [
+                                105.814967,
+                                21.016503
+                            ],
+                            [
+                                105.819888,
+                                21.023408
+                            ],
+                            [
+                                105.820209,
+                                21.023757
+                            ],
+                            [
+                                105.824816,
+                                21.027606
+                            ],
+                            [
+                                105.827375,
+                                21.029528
+                            ],
+                            [
+                                105.829617,
+                                21.03126
+                            ],
+                            [
+                                105.830119,
+                                21.032124
+                            ],
+                            [
+                                105.830338,
+                                21.032051
+                            ],
+                            [
+                                105.836107,
+                                21.03043
+                            ],
+                            [
+                                105.834708,
+                                21.028567
+                            ],
+                            [
+                                105.833716,
+                                21.026361
+                            ],
+                            [
+                                105.832354,
+                                21.023697
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "xa3321.1095",
+            "properties": {
+                "matinhxa": "1.1094",
+                "maxa": 1094,
+                "trung_tam_hc": "Số 61 phố Hoàng Cầu, phường Ô Chợ Dừa",
+                "dien_tich": 1.83,
+                "ten_chi_tiet": "phường Ô Chợ Dừa - Thủ đô Hà Nội",
+                "dan_so": "71293",
+                "sat_nhap_tu": "Phường Cát Linh (phần còn lại sau khi sáp nhập vào phường Giảng Võ), Phường Điện Biên (phần còn lại sau khi sáp nhập vào phường Hoàn Kiếm, phường Ba Đình, phường Văn Miếu Quốc Tử Giám), Phường Thành Công (phần còn lại sau khi sáp nhập vào phường Giảng Võ), Phường Ô Chợ Dừa (phần còn lại sau khi sáp nhập vào phường Đống Đa), Phường Trung Liệt (phần còn lại sau khi sáp nhập vào phường Đống Đa, phường Kim Liên), Phường Hàng Bột (phần còn lại sau khi sáp nhập vào phường Văn Miếu Quốc Tử Giám), Phường Văn Miếu Quốc Tử Giám (phần còn lại sau khi sáp nhập vào phường Văn Miếu Quốc Tử Giám)"
+            },
+            "type": "Feature"
+        }
+    ]
+}

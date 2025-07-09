@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "đang cập nhật",
+                "dien_tich": 9,
+                "ten_chi_tiet": "xã Yên Bình - tỉnh Lào Cai",
+                "dan_so": "653,422",
+                "sat_nhap_tu": "Thị trấn Yên Bình, Xã Tân Hương, Xã Thịnh Hưng, Xã Đại Đồng"
+            }
+        }
+    ]
+}

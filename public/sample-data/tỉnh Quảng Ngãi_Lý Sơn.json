@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "Trung tâm hành chính huyện Lý Sơn (cũ)",
+                "dien_tich": 0,
+                "ten_chi_tiet": "đặc khu Lý Sơn - tỉnh Quảng Ngãi",
+                "dan_so": "đang cập nhật",
+                "sat_nhap_tu": "Huyện Lý Sơn"
+            }
+        }
+    ]
+}

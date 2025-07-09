@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        102.14391327,
+        8.56276321,
+        109.46911621,
+        23.39264297
+    ],
+    "features": [
+        {
+            "properties": {
+                "trung_tam_hc": "Trụ sở Huyện ủy, HĐND, UBND huyện Vân Đồn",
+                "dien_tich": 0,
+                "ten_chi_tiet": "đặc khu Vân Đồn - tỉnh Quảng Ninh",
+                "dan_so": "đang cập nhật",
+                "sat_nhap_tu": "Thị trấn Cái Rồng, Xã Bản Sen, Xã Bình Dân, Xã Đài Xuyên, Xã Đoàn Kết, Xã Đông Xá, Xã Hạ Long, Xã Minh Châu, Xã Ngọc Vừng, Xã Quan Lạn, Xã Thắng Lợi, Xã Vạn Yên"
+            }
+        }
+    ]
+}
