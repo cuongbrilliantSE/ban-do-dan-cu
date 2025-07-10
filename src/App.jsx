@@ -193,7 +193,7 @@ function App() {
           value={selectedFile} 
           onChange={handleFileChange}
         >
-          <option value="">-- Chọn file --</option>
+          <option value="">-- Chọn xã --</option>
           {availableFiles.map((file, index) => (
             <option key={index} value={file.path}>
               {file.name}
