@@ -132,21 +132,49 @@ function App() {
     const area = props.dien_tich || props.DIEN_TICH || props.area || 'Không có dữ liệu'
     const density = props.MAT_DO ? `${props.MAT_DO} người/km²` : 'Không có dữ liệu'
     
-    layer.bindPopup(`
-      <div>
-        <h4>${displayName}</h4>
-        <p><strong>Dân số:</strong> ${typeof population === 'number' ? population.toLocaleString() : population}</p>
-        <p><strong>Diện tích:</strong> ${typeof area === 'number' ? `${area} km²` : area}</p>
-        <p><strong>Mật độ:</strong> ${density}</p>
-        ${props.maxa ? `<p><strong>Mã xã:</strong> ${props.maxa}</p>` : ''}
-        ${props.trung_tam_hc ? `<p><strong>Trung tâm hành chính:</strong> ${props.trung_tam_hc}</p>` : ''}
-        ${props.sat_nhap_tu ? `<p><strong>Sát nhập từ:</strong> ${props.sat_nhap_tu}</p>` : ''}
-        ${props.TEN_HUYEN ? `<p><strong>Huyện:</strong> ${props.TEN_HUYEN}</p>` : ''}
-        ${props.TEN_TINH ? `<p><strong>Tỉnh:</strong> ${props.TEN_TINH}</p>` : ''}
-        ${props.CAP_XA ? `<p><strong>Cấp:</strong> ${props.CAP_XA}</p>` : ''}
-        ${props.KHU_VUC ? `<p><strong>Khu vực:</strong> ${props.KHU_VUC}</p>` : ''}
-      </div>
-    `).openPopup()
+    const isMobile = window.innerWidth < 768
+    
+    if (!isMobile) {
+      layer.bindPopup(`
+        <div>
+          <h4>${displayName}</h4>
+          <p><strong>Dân số:</strong> ${typeof population === 'number' ? population.toLocaleString() : population}</p>
+          <p><strong>Diện tích:</strong> ${typeof area === 'number' ? `${area} km²` : area}</p>
+          <p><strong>Mật độ:</strong> ${density}</p>
+          ${props.maxa ? `<p><strong>Mã xã:</strong> ${props.maxa}</p>` : ''}
+          ${props.trung_tam_hc ? `<p><strong>Trung tâm hành chính:</strong> ${props.trung_tam_hc}</p>` : ''}
+          ${props.sat_nhap_tu ? `<p><strong>Sát nhập từ:</strong> ${props.sat_nhap_tu}</p>` : ''}
+          ${props.TEN_HUYEN ? `<p><strong>Huyện:</strong> ${props.TEN_HUYEN}</p>` : ''}
+          ${props.TEN_TINH ? `<p><strong>Tỉnh:</strong> ${props.TEN_TINH}</p>` : ''}
+          ${props.CAP_XA ? `<p><strong>Cấp:</strong> ${props.CAP_XA}</p>` : ''}
+          ${props.KHU_VUC ? `<p><strong>Khu vực:</strong> ${props.KHU_VUC}</p>` : ''}
+        </div>
+      `).openPopup()
+    } else {
+      // Trên mobile: hiển thị popup và dịch chuyển bản đồ xuống dưới
+      layer.bindPopup(`
+        <div>
+          <h4>${displayName}</h4>
+          <p><strong>Dân số:</strong> ${typeof population === 'number' ? population.toLocaleString() : population}</p>
+          <p><strong>Diện tích:</strong> ${typeof area === 'number' ? `${area} km²` : area}</p>
+          <p><strong>Mật độ:</strong> ${density}</p>
+          ${props.maxa ? `<p><strong>Mã xã:</strong> ${props.maxa}</p>` : ''}
+          ${props.trung_tam_hc ? `<p><strong>Trung tâm hành chính:</strong> ${props.trung_tam_hc}</p>` : ''}
+          ${props.sat_nhap_tu ? `<p><strong>Sát nhập từ:</strong> ${props.sat_nhap_tu}</p>` : ''}
+          ${props.TEN_HUYEN ? `<p><strong>Huyện:</strong> ${props.TEN_HUYEN}</p>` : ''}
+          ${props.TEN_TINH ? `<p><strong>Tỉnh:</strong> ${props.TEN_TINH}</p>` : ''}
+          ${props.CAP_XA ? `<p><strong>Cấp:</strong> ${props.CAP_XA}</p>` : ''}
+          ${props.KHU_VUC ? `<p><strong>Khu vực:</strong> ${props.KHU_VUC}</p>` : ''}
+        </div>
+      `).openPopup()
+      
+      // Dịch chuyển bản đồ lên trên một chút để popup không che khuất
+      setTimeout(() => {
+        if (mapRef.current) {
+          mapRef.current.panBy([0, -100]) // Dịch chuyển 100px lên trên
+        }
+      }, 100)
+    }
   }
 
   const onEachFeature = (feature, layer) => {
