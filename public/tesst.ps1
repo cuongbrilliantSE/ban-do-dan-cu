@@ -1,5 +1,5 @@
 # Đường dẫn thư mục chứa file JSON
-$folderPath = ".\sample-data"
+$folderPath = ".\public\sample-data"
 
 # Lấy danh sách file .json
 $files = Get-ChildItem -Path $folderPath -Filter *.json
@@ -39,16 +39,32 @@ foreach ($file in $files) {
         $name = Format-Title $fileName
     }
 
+    # Đọc nội dung file JSON để lấy trường sat_nhap_tu
+    $relation = ""
+    try {
+        $jsonContent = Get-Content -Path $file.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+        if ($jsonContent.features -and $jsonContent.features.Count -gt 0) {
+            $firstFeature = $jsonContent.features[0]
+            if ($firstFeature.properties -and $firstFeature.properties.sat_nhap_tu) {
+                $relation = $firstFeature.properties.sat_nhap_tu
+            }
+        }
+    }
+    catch {
+        Write-Warning "Không thể đọc file $($file.Name): $($_.Exception.Message)"
+    }
+
     $entry = @{
         name = $name
         path = $filePath
+        relation = $relation
     }
 
     $result += $entry
 }
 
 # Xuất ra file JSON
-$outputPath = "index.json"
+$outputPath = "sampleFiles.json"
 $result | ConvertTo-Json -Depth 3 | Out-File -Encoding utf8 $outputPath
 
 Write-Host "✅ Đã tạo file $outputPath với $($result.Count) mục." -ForegroundColor Green

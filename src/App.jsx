@@ -2,13 +2,18 @@ import React, { useState, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, GeoJSON, ZoomControl } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { Dropdown } from 'primereact/dropdown'
+import 'primereact/resources/themes/lara-light-cyan/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+import 'primeflex/primeflex.css'
 
 function App() {
   const [geoJsonData, setGeoJsonData] = useState(null)
   const [selectedFeature, setSelectedFeature] = useState(null)
   const [loading, setLoading] = useState(false)
   const [availableFiles, setAvailableFiles] = useState([])
-  const [selectedFile, setSelectedFile] = useState('')
+  const [selectedFile, setSelectedFile] = useState(null)
   const mapRef = useRef(null)
 
 
@@ -22,12 +27,6 @@ function App() {
         }
         const files = await response.json()
         setAvailableFiles(files)
-        
-        // Load file đầu tiên mặc định
-        if (files.length > 0) {
-          setSelectedFile(files[0].path)
-          loadGeoJsonFile(files[0].path)
-        }
       } catch (error) {
         console.error('Lỗi khi tải danh sách file:', error)
         // Fallback về danh sách mặc định nếu không tải được
@@ -117,8 +116,8 @@ function App() {
     }
   }
 
-  const handleFileChange = (event) => {
-    const filePath = event.target.value
+  const handleFileChange = (e) => {
+    const filePath = e.value
     setSelectedFile(filePath)
     if (filePath) {
       loadGeoJsonFile(filePath)
@@ -188,18 +187,17 @@ function App() {
       
       <div className="controls">
         <label htmlFor="file-select">Tìm kiếm xã/phường:</label>
-        <select 
-          id="file-select"
-          value={selectedFile} 
+        <Dropdown 
+          value={selectedFile}
           onChange={handleFileChange}
-        >
-          <option value="">-- Chọn xã --</option>
-          {availableFiles.map((file, index) => (
-            <option key={index} value={file.path}>
-              {file.name}
-            </option>
-          ))}
-        </select>
+          options={availableFiles.map(file => ({ label: file.name, value: file.path, relation: file.relation }))}
+          virtualScrollerOptions={{ itemSize: 38 }}
+          placeholder="-- Chọn xã/phường --"
+          className="w-full md:w-24rem"
+          filter
+          filterBy="label,relation"
+          showClear
+        />
       </div>
 
       {selectedFeature && (
@@ -233,7 +231,7 @@ function App() {
       >
         <ZoomControl position="bottomright" />
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Cường Đoàn'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         
