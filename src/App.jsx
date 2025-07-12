@@ -200,7 +200,7 @@ function App() {
         />
       </div>
 
-      {selectedFeature && (
+      {selectedFeature && window.innerWidth >= 768 && (
         <div className="info-panel">
           <h3>Thông tin khu vực</h3>
           <p><strong>Tên chi tiết:</strong> {selectedFeature.ten_chi_tiet || selectedFeature.TEN_XA || selectedFeature.name || 'Không có tên'}</p>
