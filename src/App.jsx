@@ -119,7 +119,21 @@ function App() {
   const handleFileChange = (e) => {
     const filePath = e.value
     setSelectedFile(filePath)
-    if (filePath) {
+    
+    // Nếu filePath là null hoặc undefined (khi clear dropdown)
+    if (!filePath) {
+      // Reset tất cả dữ liệu
+      setGeoJsonData(null)
+      setSelectedFeature(null)
+      
+      // Đóng tất cả popup đang mở
+      if (mapRef.current) {
+        mapRef.current.closePopup()
+      }
+      
+      // Không reset view, giữ nguyên vị trí hiện tại của bản đồ
+    } else {
+      // Load file GeoJSON nếu có filePath
       loadGeoJsonFile(filePath)
     }
   }
